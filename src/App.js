@@ -5,8 +5,9 @@ import Homepage from './components/homepage';
 import Action from './components/action';
 import Annther from './components/another_action';
 import Something from './components/something';
-import { Layout } from './Layout/Components/Header/layout';
-import Login from './components';
+import Layout from './Layout/Components/Header/layout';
+import Loginuser from './components/user';
+
 function App() {
     return (
         <div>
@@ -16,7 +17,7 @@ function App() {
                     <Route path="action" element={<Action />} />
                     <Route path="anothor_action" element={<Annther />} />
                     <Route path="something" element={<Something />} />
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/user" element={<Loginuser />} />
                 </Route>
             </Routes>
         </div>

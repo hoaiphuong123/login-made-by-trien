@@ -2,13 +2,17 @@ import { Link, Outlet, NavLink } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import React from 'react';
 import Sidebar from '../sidebar/sidebar';
-const Layout = () => {
+
+function Layout() {
     return (
         <div>
             <nav className="navbar background">
                 <ul className="nav-list">
                     <div className="logo">
-                        <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png" />
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210420155809/gfg-new-logo.png"
+                            alt=""
+                        />
                     </div>
                     <li>
                         <Link to="/">HomePage</Link>
@@ -24,7 +28,7 @@ const Layout = () => {
                         </Dropdown>
                     </li>
                     <li>
-                        <NavLink to="/login">Login</NavLink>
+                        <NavLink to="/user">Login</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -37,5 +41,5 @@ const Layout = () => {
             </footer>
         </div>
     );
-};
-export { Layout };
+}
+export default Layout;
