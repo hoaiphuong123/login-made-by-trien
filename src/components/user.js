@@ -4,9 +4,8 @@ import Login from './login';
 function Loginuser() {
     return (
         <div>
-            <Login name="admin123" password="123" />
+            <Login name=" " password=" " />
         </div>
     );
 }
-
 export default Loginuser;
