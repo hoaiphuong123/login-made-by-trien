@@ -17,47 +17,30 @@ function Login({ name, password }) {
     };
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log({ name });
-        console.log({ password });
+        console.log({ user });
+        console.log({ passUser });
     };
     return (
         <div className="fromlogin">
-            <form>
-                <text>Login</text>
-                <div className="input-container">
-                    <text>Username </text>
-                    <input
-                        type="text"
-                        name={name}
-                        onChange={changeUser}
-                        onSubmit={submitHandler}
-                        required
-                    />
-                </div>
-                <div className="input-container">
-                    <text>Password </text>
-                    <input
-                        name={password}
-                        type={pass ? 'text' : 'password'}
-                        onChange={changePass}
-                        required
-                    />
-                    <input
-                        id="checkbox"
-                        type="checkbox"
-                        checked={pass}
-                        onChange={handleClick}
-                        onSubmit={submitHandler}
-                    />
-                </div>
-                <div className="button-container">
-                    <input type="submit" value="submit" onSubmit={submitHandler} />
-                    {user},{passUser}
-                </div>
-            </form>
+            <div className="input-container">
+                <lable htmlFor="user">Username</lable>
+                <input id="user" type="text" name={name} onChange={changeUser} required />
+            </div>
+            <div className="input-container">
+                <lable htmlFor="passUser">Password</lable>
+                <input
+                    id="passUser"
+                    name={password}
+                    type={pass ? 'text' : 'password'}
+                    onChange={changePass}
+                    required
+                />
+                <input id="checkbox" type="checkbox" checked={pass} onChange={handleClick} />
+            </div>
         </div>
     );
 }
+
 Login.propTypes = {
     name: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired
