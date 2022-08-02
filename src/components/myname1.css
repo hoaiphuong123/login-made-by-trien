@@ -1,12 +1,10 @@
-.fromlogin{
-    display: flex;
-    justify-content: center;
+.container{
     text-align: center;
 }
 .input-container{
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.button-container{
-    justify-content: center;
+.checkbox{
+    margin-bottom: 10px;
 }
